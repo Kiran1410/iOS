@@ -1,0 +1,26 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'UnityiOSPOC' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+ # pod 'SliderUnityFramework', :git => 'https://github.com/Kiran1410/SliderUnityFramework.git', :branch => 'main'
+
+pod 'SliderUnityFramework', :path => '/Users/kjoshi/Documents/Projects/CICD_POC/SliderUnityFramework/'
+
+
+
+
+  # Pods for UnityiOSPOC
+
+  target 'UnityiOSPOCTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'UnityiOSPOCUITests' do
+    # Pods for testing
+  end
+
+end

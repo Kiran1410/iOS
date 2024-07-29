@@ -1,0 +1,6 @@
+framework module Pods_UnityiOSPOCTests {
+  umbrella header "Pods-UnityiOSPOCTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
