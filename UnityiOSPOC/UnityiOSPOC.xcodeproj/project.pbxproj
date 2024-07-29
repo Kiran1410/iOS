@@ -18,6 +18,8 @@
 		7AC3D4732C581AE200B20705 /* UnityiOSPOCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3D4722C581AE200B20705 /* UnityiOSPOCTests.swift */; };
 		7AC3D47D2C581AE200B20705 /* UnityiOSPOCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3D47C2C581AE200B20705 /* UnityiOSPOCUITests.swift */; };
 		7AC3D47F2C581AE200B20705 /* UnityiOSPOCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC3D47E2C581AE200B20705 /* UnityiOSPOCUITestsLaunchTests.swift */; };
+		7ACF476A2C581D96004A8161 /* DynamicLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF47692C581D96004A8161 /* DynamicLoader.swift */; };
+		7ACF476C2C581DED004A8161 /* UnityGELoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACF476B2C581DED004A8161 /* UnityGELoader.swift */; };
 		82155AAE3CE5E45C6B9D1620 /* Pods_UnityiOSPOC_UnityiOSPOCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F1E42462A8741B9E8DBAFF /* Pods_UnityiOSPOC_UnityiOSPOCUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		7AC3D4782C581AE200B20705 /* UnityiOSPOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnityiOSPOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC3D47C2C581AE200B20705 /* UnityiOSPOCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityiOSPOCUITests.swift; sourceTree = "<group>"; };
 		7AC3D47E2C581AE200B20705 /* UnityiOSPOCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityiOSPOCUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7ACF47692C581D96004A8161 /* DynamicLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicLoader.swift; sourceTree = "<group>"; };
+		7ACF476B2C581DED004A8161 /* UnityGELoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnityGELoader.swift; sourceTree = "<group>"; };
 		9755871C0EB63CED8CD8D594 /* Pods-UnityiOSPOCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UnityiOSPOCTests.release.xcconfig"; path = "Target Support Files/Pods-UnityiOSPOCTests/Pods-UnityiOSPOCTests.release.xcconfig"; sourceTree = "<group>"; };
 		98F1E42462A8741B9E8DBAFF /* Pods_UnityiOSPOC_UnityiOSPOCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnityiOSPOC_UnityiOSPOCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60A89DCC0F27B251FB2DAEF /* Pods_UnityiOSPOCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UnityiOSPOCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +127,8 @@
 				7AC3D4642C581AE200B20705 /* Assets.xcassets */,
 				7AC3D4662C581AE200B20705 /* LaunchScreen.storyboard */,
 				7AC3D4692C581AE200B20705 /* Info.plist */,
+				7ACF47692C581D96004A8161 /* DynamicLoader.swift */,
+				7ACF476B2C581DED004A8161 /* UnityGELoader.swift */,
 			);
 			path = UnityiOSPOC;
 			sourceTree = "<group>";
@@ -164,7 +170,6 @@
 				291C2F0DC709AAD68EB0E82C /* Pods-UnityiOSPOCTests.debug.xcconfig */,
 				9755871C0EB63CED8CD8D594 /* Pods-UnityiOSPOCTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -372,7 +377,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC3D4602C581AE100B20705 /* ViewController.swift in Sources */,
+				7ACF476C2C581DED004A8161 /* UnityGELoader.swift in Sources */,
 				7AC3D45C2C581AE100B20705 /* AppDelegate.swift in Sources */,
+				7ACF476A2C581D96004A8161 /* DynamicLoader.swift in Sources */,
 				7AC3D45E2C581AE100B20705 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,6 +571,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,6 +601,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
