@@ -2,15 +2,15 @@ PODS:
   - SliderUnityFramework (0.0.1)
 
 DEPENDENCIES:
-  - SliderUnityFramework (from `/Users/kjoshi/Documents/Projects/CICD_POC/SliderUnityFramework/`)
+  - SliderUnityFramework (from `/Users/kjoshi/Documents/Projects/CICD_POC/SliderUnityFramework`)
 
 EXTERNAL SOURCES:
   SliderUnityFramework:
-    :path: "/Users/kjoshi/Documents/Projects/CICD_POC/SliderUnityFramework/"
+    :path: "/Users/kjoshi/Documents/Projects/CICD_POC/SliderUnityFramework"
 
 SPEC CHECKSUMS:
-  SliderUnityFramework: 2a0396ef8fd9c1087d7c0203d566aca8056e85e7
+  SliderUnityFramework: 5f212cdbaf03528a394d025d5d8ae877dff797a2
 
-PODFILE CHECKSUM: cd00801edc22adeb794ddc69f57e2a227c5ee43e
+PODFILE CHECKSUM: ff62fc69ace1bcbc456ec04cfa86bf6e06ecd039
 
 COCOAPODS: 1.15.2

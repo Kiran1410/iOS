@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
     var geLoader: UnityGELoader?
 
     override func viewDidLoad() {
@@ -27,10 +28,22 @@ class ViewController: UIViewController {
         
         self.geLoader?.load(completion: { (controller) in
             if let aView = controller?.view {
-               print(aView)
+                self.view.addSubview(aView)
             }
         })
     }
 
 }
 
+
+extension ViewController: DynamicLoaderDelegate {
+    
+    func didFailedLoadingBundle(path: String!, loader: DynamicLoader) {
+       print("didFailedLoadingBundle---->\(path)")
+    }
+    
+    func didRecieveMessage(message: String) {
+        print("didRecieveMessage---->\(message)")
+
+    }
+}

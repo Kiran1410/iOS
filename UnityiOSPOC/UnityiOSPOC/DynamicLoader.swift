@@ -61,10 +61,13 @@ class DynamicLoader:NSObject {
     
     func load(completion:((_ controller: UIViewController? )-> Void)?) {
         // override this method to load respective framework
+        print("load----->")
     }
     
     func unload() {
         // do additional things to unload game engine
+        print("unload----->")
+
     }
     
     final func unloadBundle() {
@@ -73,12 +76,13 @@ class DynamicLoader:NSObject {
         self.bundle = nil
     }
     
-    func send(message:String) {
+    func send(message: String) {
         // override this method to send message to framework
+        print("send----->\(message)")
+
     }
     
     final func received(message:String) {
-        
         delegate?.didRecieveMessage(message: message)
     }
     

@@ -8,7 +8,6 @@
 import Foundation
 import UnityFramework
 
-
 class UnityGELoader:DynamicLoader {
     
     private weak var ufw: UnityFramework?
@@ -19,7 +18,6 @@ class UnityGELoader:DynamicLoader {
 #if !targetEnvironment(simulator)
         guard let aClass = self.bundle?.principalClass as? UnityFramework.Type,
               let ufw = aClass.getInstance()  else {
-            
             return nil
         }
         
@@ -28,7 +26,6 @@ class UnityGELoader:DynamicLoader {
             // do initial stuff
             // set data bundle identifier
             if let bundle = self.bundle, let id = bundle.bundleIdentifier {
-                
                 ufw.setDataBundleId(id.cString(using: .utf8))
             }
         }
@@ -44,9 +41,7 @@ class UnityGELoader:DynamicLoader {
     private func setUpBridge() {
         
         if let bundle = self.bundle, let bridgeClass = bundle.classNamed("Bridge") as? Bridge.Type {
-            
             self.bridge = bridgeClass.shared()
-            
             self.bridge?.delegate = self
         }
     }
@@ -75,7 +70,6 @@ class UnityGELoader:DynamicLoader {
 
         // TODO: Proper way to share game view
         DispatchQueue.main.asyncAfter(wallDeadline: .now() + 0.3 ) {
-
             completion?(self.ufw?.unityGLViewController())
         }
     }
@@ -84,23 +78,18 @@ class UnityGELoader:DynamicLoader {
         print("UnityDebug - unload unity framework and delete bridge")
 
         if let _ufw = self.ufw {
-            
             _ufw.unloadApplication()
-            
             if let appController = _ufw.appController(), let window = appController.window {
-                
                 window.isHidden = true
                 window.resignKey()
             }
         }
-        
         self.bridge?.delegate = nil
         self.bridge = nil
         self.ufw = nil
     }
     
     override func send(message: String) {
-
         self.bridge?.send(message)
     }
 }
