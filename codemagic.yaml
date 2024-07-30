@@ -13,6 +13,6 @@ workflows:
       - name: pod install
         script: cd UnityiOSPOC && pod deintegrate && pod install && cd -
       - name: Build and compile 
-        script: xcode-project build-ipa --workspace UnityiOSPOC.xcworkspace --scheme UnityiOSPOC
+        script: xcode-project build-ipa --workspace UnityiOSPOC/UnityiOSPOC.xcworkspace --scheme UnityiOSPOC
     artifacts:
       - build/ios/ipa/*.ipa
