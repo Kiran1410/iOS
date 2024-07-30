@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-UnityiOSPOC-UnityiOSPOCUITests/Pods-UnityiOSPOC-UnityiOSPOCUITests-frameworks.sh
-${PODS_ROOT}/../../../SliderUnityFramework/UnityFramework.framework
+${PODS_ROOT}/SliderUnityFramework/UnityFramework.framework

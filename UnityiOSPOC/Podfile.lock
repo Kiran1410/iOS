@@ -2,15 +2,21 @@ PODS:
   - SliderUnityFramework (0.0.1)
 
 DEPENDENCIES:
-  - SliderUnityFramework (from `/Users/kjoshi/Documents/Projects/CICD_POC/SliderUnityFramework`)
+  - SliderUnityFramework (from `https://github.com/Kiran1410/SliderUnityFramework.git`, branch `main`)
 
 EXTERNAL SOURCES:
   SliderUnityFramework:
-    :path: "/Users/kjoshi/Documents/Projects/CICD_POC/SliderUnityFramework"
+    :branch: main
+    :git: https://github.com/Kiran1410/SliderUnityFramework.git
+
+CHECKOUT OPTIONS:
+  SliderUnityFramework:
+    :commit: 31bbabe82b19fb1c191ba188c8c35505fa02c56b
+    :git: https://github.com/Kiran1410/SliderUnityFramework.git
 
 SPEC CHECKSUMS:
   SliderUnityFramework: 5f212cdbaf03528a394d025d5d8ae877dff797a2
 
-PODFILE CHECKSUM: ff62fc69ace1bcbc456ec04cfa86bf6e06ecd039
+PODFILE CHECKSUM: 7595155abf811fa6da812109682c8c215cd7ab09
 
 COCOAPODS: 1.15.2
