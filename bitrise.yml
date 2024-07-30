@@ -7,37 +7,21 @@ workflows:
     summary:
     description:
     steps:
-    - git-clone@8: {}
-    - cocoapods-install@2:
+    - script:
+        title: Pod Update
         inputs:
-        - is_cache_disabled: 'true'
-    - xcode-archive@5:
+        - content: |-
+            #!/bin/bash
+            # fail if any commands fails
+            cd UnityiOSPOC && pod deintegrate && pod install && cd -
+    - script:
+        title: Build
         inputs:
-        - project_path: UnityiOSPOC/UnityiOSPOC.xcworkspace
-        - scheme: UnityiOSPOC
-        - cache_level: none
-    - deploy-to-bitrise-io@2: {}
-  build:
-    summary: Build your Xcode project.
-    description:
-    steps:
-    - git-clone@8: {}
-    - restore-cocoapods-cache@1: {}
-    - cocoapods-install@2:
-        inputs:
-        - is_cache_disabled: 'true'
+        - content: |-
+            #!/bin/bash
+            # fail if any commands fails
+            xcode-project build-ipa --workspace UnityiOSPOC/UnityiOSPOC.xcworkspace --scheme UnityiOSPOC --archive-flags="-destination 'generic/platform=iOS'"
 meta:
   bitrise.io:
     stack: osx-xcode-15.4.x
     machine_type_id: g2-m1.4core
-app:
-  envs:
-  - opts:
-      is_expand: false
-    BITRISE_PROJECT_PATH: UnityiOSPOC/UnityiOSPOC.xcworkspace
-  - opts:
-      is_expand: false
-    BITRISE_SCHEME: Pods-UnityiOSPOC
-  - opts:
-      is_expand: false
-    BITRISE_DISTRIBUTION_METHOD: development
