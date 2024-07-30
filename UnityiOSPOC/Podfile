@@ -5,10 +5,17 @@ target 'UnityiOSPOC' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
- # pod 'SliderUnityFramework', :git => 'https://github.com/Kiran1410/SliderUnityFramework.git', :branch => 'main'
 
-pod 'SliderUnityFramework', :path => '/Users/kjoshi/Documents/Projects/CICD_POC/SliderUnityFramework/'
 
+
+ pod 'SliderUnityFramework', :git => 'https://github.com/Kiran1410/SliderUnityFramework.git', :branch => 'main'
+
+# pod 'SliderUnityFramework', :path => '/Users/kjoshi/Documents/Projects/CICD_POC/SliderUnityFramework'
+
+ 
+ 
+ #pod 'UnityFramework', :path => '/Users/kjoshi/Documents/Projects/iOS_Projects/UnityFramework'
+ # pod 'UnityFramework', :git => 'https://vie.git.bwinparty.com/entain/ppac/casinonative/UnityFramework.git', :branch => 'master'
 
 
 
