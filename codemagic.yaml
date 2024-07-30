@@ -10,6 +10,8 @@ workflows:
     scripts:
       - name: Set up provisioning profiles settings on Xcode project
         script: xcode-project use-profiles
+      - name: pod install
+        script: pod deintegrate && pod update
       - name: Build and compile
         script: xcode-project build-ipa --project UnityiOSPOC/UnityiOSPOC.xcodeproj --scheme UnityiOSPOC --archive-flags="-destination 'generic/platform=iOS'"
     artifacts:
