@@ -4,13 +4,21 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: ios
 workflows:
   archive_and_export_app:
-    summary:
-    description:
+    summary: Create an IPA file to install your app on a device or share it with your
+      team.
+    description: The workflow will first clone your Git repository, cache and install
+      your project's dependencies if any, export an IPA file from the project and
+      save it.
     steps:
     - git-clone@8: {}
     - cocoapods-install@2:
         inputs:
         - is_cache_disabled: 'true'
+    - certificate-and-profile-installer@1:
+        inputs:
+        - certificate_passphrase: https://concrete-userfiles-production.s3.us-west-2.amazonaws.com/build_certificates/uploads/309395/original/Certificates%202.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIV2YZWMVCNWNR2HA%2F20240730%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240730T110127Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=44249f60c84821d3aee2cc2b3342b492fa011a8cee7457afed168244b97349b1
+        - provisioning_profile_url: https://concrete-userfiles-production.s3.us-west-2.amazonaws.com/prov_profile_documents/uploads/659227/original/playmgmsportsnjent_profile.mobileprovision?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIV2YZWMVCNWNR2HA%2F20240730%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240730T110845Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=57070013
+        - certificate_url: https://concrete-userfiles-production.s3.us-west-2.amazonaws.com/prov_profile_documents/uploads/659227/original/playmgmsportsnjent_profile.mobileprovision?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIV2YZWMVCNWNR2HA%2F20240730%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20240730T110845Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=57070013
     - xcode-archive@5:
         inputs:
         - project_path: UnityiOSPOC/UnityiOSPOC.xcworkspace
@@ -22,10 +30,11 @@ workflows:
     description:
     steps:
     - git-clone@8: {}
-    - restore-cocoapods-cache@1: {}
     - cocoapods-install@2:
         inputs:
         - is_cache_disabled: 'true'
+    - save-cocoapods-cache@1: {}
+    - deploy-to-bitrise-io@2: {}
 meta:
   bitrise.io:
     stack: osx-xcode-15.4.x
