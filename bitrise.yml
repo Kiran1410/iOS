@@ -38,8 +38,8 @@ workflows:
         - app_id: null
         - bundle_id: com.playmgm.nj.sports2
         - itms_upload_parameters: null
+        - connection: false
         - ipa_path: $IPA_PATH
-        - connection: apple_id
     envs:
     - IPA_PATH: /Users/vagrant/git/Build/UnityiOSPOC.ipa
       opts:
