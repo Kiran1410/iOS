@@ -10,17 +10,17 @@
 	<string>app-store-connect</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>com.playmgm.nj.sports2</key>
-		<string>Play MGM Sports AppStore</string>
+		<key>com.bwin.sportsbook.live.at</key>
+		<string>Sportsbook_AT_AppStore_Live</string>
 	</dict>
 	<key>signingCertificate</key>
-	<string>64E839AB62D0C8BE2579CFFB9E8D004F5D09C636</string>
+	<string>Apple Distribution</string>
 	<key>signingStyle</key>
 	<string>manual</string>
 	<key>stripSwiftSymbols</key>
 	<true/>
 	<key>teamID</key>
-	<string>CB3Y69STL7</string>
+	<string>ZBA5NZSF6G</string>
 	<key>uploadSymbols</key>
 	<true/>
 </dict>
