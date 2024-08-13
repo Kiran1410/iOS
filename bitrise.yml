@@ -21,13 +21,28 @@ workflows:
         - content: |-
             #!/bin/bash
             # fail if any commands fails
-            rm -rf /Users/vagrant/git/Build
-            rm -rf /Users/vagrant/git/UnityiOSPOC.xcarchive
-            rm -rf /Users/vagrant/git/UnityiOSPOC.ipa
-            rm -rf /Users/vagrant/git/DistributionSummary.plist
+            ls -lart /Users/vagrant/git/
             xcodebuild -workspace UnityiOSPOC/UnityiOSPOC.xcworkspace -scheme UnityiOSPOC -configuration 'Release' -archivePath ./UnityiOSPOC.xcarchive archive
             xcodebuild -exportArchive -archivePath ./UnityiOSPOC.xcarchive -exportPath ./Build -exportOptionsPlist ./ExportOptions_upload.plist
             ls -lart /Users/vagrant/git/Build
+    - deploy-to-itunesconnect-deliver@2:
+        inputs:
+        - api_key_path: null
+        - api_issuer: null
+        - itunescon_user: null
+        - password: null
+        - app_password: null
+        - team_id: null
+        - team_name: null
+        - app_id: null
+        - bundle_id: com.playmgm.nj.sports2
+        - itms_upload_parameters: null
+        - ipa_path: $IPA_PATH
+        - connection: apple_id
+    envs:
+    - IPA_PATH: /Users/vagrant/git/Build
+      opts:
+        is_expand: false
 meta:
   bitrise.io:
     stack: osx-xcode-15.4.x
