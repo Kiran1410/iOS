@@ -26,7 +26,7 @@ workflows:
             rm -rf /Users/vagrant/git/UnityiOSPOC.ipa
             rm -rf /Users/vagrant/git/DistributionSummary.plist
             xcodebuild -workspace UnityiOSPOC/UnityiOSPOC.xcworkspace -scheme UnityiOSPOC -configuration 'Release' -archivePath ./UnityiOSPOC.xcarchive archive
-            xcodebuild -exportArchive -archivePath ./UnityiOSPOC.xcarchive -exportPath ./UnityiOSPOC.xcarchive -exportOptionsPlist ./ExportOptions.plist
+            xcodebuild -exportArchive -archivePath ./UnityiOSPOC.xcarchive -exportPath ./UnityiOSPOC.xcarchive -exportOptionsPlist ./ExportOptions_upload.plist
             ls -lart /Users/vagrant/git/Build
 meta:
   bitrise.io:
