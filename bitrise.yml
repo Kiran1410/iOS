@@ -23,7 +23,7 @@ workflows:
             # fail if any commands fails
             ls -lart /Users/vagrant/git/
             xcodebuild -workspace UnityiOSPOC/UnityiOSPOC.xcworkspace -scheme UnityiOSPOC -configuration 'Release' -archivePath ./UnityiOSPOC.xcarchive archive
-            xcodebuild -exportArchive -archivePath ./UnityiOSPOC.xcarchive -exportPath ./Build -exportOptionsPlist ./ExportOptions_upload.plist
+            xcodebuild -exportArchive -archivePath ./UnityiOSPOC.xcarchive -exportPath ./Build -exportOptionsPlist ./ExportOptions.plist
             ls -lart /Users/vagrant/git/Build
     - deploy-to-itunesconnect-deliver@2:
         inputs:
