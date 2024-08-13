@@ -29,7 +29,7 @@ workflows:
     - deploy-to-itunesconnect-deliver@2:
         inputs:
         - api_key_path: $API_KEY
-        - api_issuer: null
+        - api_issuer: 88KD6S3DKM
         - itunescon_user: null
         - password: null
         - app_password: null
