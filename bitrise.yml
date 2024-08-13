@@ -21,10 +21,13 @@ workflows:
         - content: |-
             #!/bin/bash
             # fail if any commands fails
+            rm -rf /Users/vagrant/git/Build
+            rm -rf /Users/vagrant/git/UnityiOSPOC.xcarchive
+            rm -rf /Users/vagrant/git/UnityiOSPOC.ipa
+            rm -rf /Users/vagrant/git/DistributionSummary.plist
             xcodebuild -workspace UnityiOSPOC/UnityiOSPOC.xcworkspace -scheme UnityiOSPOC -configuration 'Release' -archivePath ./UnityiOSPOC.xcarchive archive
-            xcodebuild -exportArchive -archivePath ./UnityiOSPOC.xcarchive -exportPath /Users/vagrant/git/Build -exportOptionsPlist ./ExportOptions.plist
+            xcodebuild -exportArchive -archivePath ./UnityiOSPOC.xcarchive -exportPath ./UnityiOSPOC.xcarchive -exportOptionsPlist ./ExportOptions.plist
             ls -lart /Users/vagrant/git/Build
-            xcodebuild -exportArchive -archivePath ./UnityiOSPOC.xcarchive -exportOptionsPlist ./ExportOptions.plist -exportPath /Users/vagrant/git/UnityiOSPOC.ipa
 meta:
   bitrise.io:
     stack: osx-xcode-15.4.x
