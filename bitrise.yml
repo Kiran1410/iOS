@@ -38,7 +38,7 @@ workflows:
         - app_id: null
         - bundle_id: com.bwin.sportsbook.live.at
         - itms_upload_parameters: null
-        - connection: api_key
+        - connection: false
         - ipa_path: $IPA_PATH
     envs:
     - IPA_PATH: /Users/vagrant/git/Build/UnityiOSPOC.ipa
