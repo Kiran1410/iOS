@@ -30,15 +30,15 @@ workflows:
         inputs:
         - api_key_path: $API_KEY
         - api_issuer: null
-        - itunescon_user: kiran.teki@ivycomptech.com
-        - password: Ivy@2025
+        - itunescon_user: null
+        - password: null
         - app_password: null
         - team_id: 124055983
         - team_name: null
         - app_id: null
-        - bundle_id: com.playmgm.nj.sports2
+        - bundle_id: com.bwin.sportsbook.live.at
         - itms_upload_parameters: null
-        - connection: apple_id
+        - connection: null
         - ipa_path: $IPA_PATH
     envs:
     - IPA_PATH: /Users/vagrant/git/Build/UnityiOSPOC.ipa
