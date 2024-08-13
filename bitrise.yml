@@ -26,20 +26,8 @@ workflows:
             xcodebuild -workspace UnityiOSPOC/UnityiOSPOC.xcworkspace -scheme UnityiOSPOC -configuration 'Release' -archivePath ./UnityiOSPOC.xcarchive archive
             xcodebuild -exportArchive -archivePath ./UnityiOSPOC.xcarchive -exportPath ./Build -exportOptionsPlist ./ExportOptions.plist
             ls -lart /Users/vagrant/git/Build
-    - deploy-to-itunesconnect-deliver@2:
-        inputs:
-        - api_key_path: $API_KEY
-        - api_issuer: 88KD6S3DKM
-        - itunescon_user: kiran.teki@ivycomptech.com
-        - password: Ivy@2025
-        - app_password: null
-        - team_id: 124055983
-        - team_name: null
-        - app_id: null
-        - bundle_id: com.bwin.sportsbook.live.at
-        - itms_upload_parameters: null
-        - connection: "api_key"
-        - ipa_path: $IPA_PATH
+            cd /Users/vagrant/git/Build
+            xcrun altool --upload-app --type ios -f UnityiOSPOC.ipa -u kiran.teki@ivycomptech.com -p 'usft-leqg-sxpg-kxab'
     envs:
     - IPA_PATH: /Users/vagrant/git/Build/UnityiOSPOC.ipa
       opts:
