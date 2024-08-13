@@ -20,7 +20,7 @@ workflows:
         - content: |-
             #!/bin/bash
             # fail if any commands fails
-            xcode-project build-ipa --workspace UnityiOSPOC/UnityiOSPOC.xcworkspace --scheme UnityiOSPOC
+            xcodebuild -workspace UnityiOSPOC.xcworkspace -scheme UnityiOSPOC -configuration 'Release' -destination 'generic/platform=iOS'
 meta:
   bitrise.io:
     stack: osx-xcode-15.4.x
