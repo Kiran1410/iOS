@@ -6,6 +6,7 @@ workflows:
     summary: null
     description: null
     steps:
+    - git-clone@8: {}
     - script:
         title: Pod Update
         inputs:
