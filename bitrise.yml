@@ -14,6 +14,7 @@ workflows:
             #!/bin/bash
             # fail if any commands fails
             cd UnityiOSPOC && pod deintegrate && pod install && cd -
+    - certificate-and-profile-installer@1: {}
     - script:
         title: Build
         inputs:
