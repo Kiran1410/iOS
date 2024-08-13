@@ -30,8 +30,8 @@ workflows:
         inputs:
         - api_key_path: $API_KEY
         - api_issuer: 88KD6S3DKM
-        - itunescon_user:
-        - password:
+        - itunescon_user: kiran.teki@ivycomptech.com
+        - password: Ivy@2025
         - app_password: null
         - team_id: 124055983
         - team_name: null
