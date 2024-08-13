@@ -28,7 +28,7 @@ workflows:
             ls -lart /Users/vagrant/git/Build
     - deploy-to-itunesconnect-deliver@2:
         inputs:
-        - api_key_path: null
+        - api_key_path: $API_KEY
         - api_issuer: null
         - itunescon_user: kiran.teki@ivycomptech.com
         - password: Ivy@2025
@@ -42,6 +42,9 @@ workflows:
         - ipa_path: $IPA_PATH
     envs:
     - IPA_PATH: /Users/vagrant/git/Build/UnityiOSPOC.ipa
+      opts:
+        is_expand: false
+    - API_KEY: /Users/vagrant/git/
       opts:
         is_expand: false
 meta:
