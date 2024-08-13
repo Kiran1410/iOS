@@ -22,7 +22,7 @@ workflows:
             #!/bin/bash
             # fail if any commands fails
             xcodebuild -workspace UnityiOSPOC/UnityiOSPOC.xcworkspace -scheme UnityiOSPOC -configuration 'Release' -archivePath ./UnityiOSPOC.xcarchive archive
-            xcodebuild -exportArchive -archivePath ./UnityiOSPOC.xcarchive -exportPath /bitrise/deploy/ -exportOptionsPlist ./ExportOptions.plist
+            xcodebuild -exportArchive -archivePath ./UnityiOSPOC.xcarchive -exportPath /Users/vagrant/git/ -exportOptionsPlist ./ExportOptions.plist
 meta:
   bitrise.io:
     stack: osx-xcode-15.4.x
