@@ -600,7 +600,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = FTCKKZBR2C;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -640,7 +640,7 @@
 				CODE_SIGN_IDENTITY = "Apple Distribution: ElectraWorks Limited (ZBA5NZSF6G)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = ZBA5NZSF6G;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
