@@ -33,7 +33,7 @@ workflows:
         - itunescon_user: null
         - password: null
         - app_password: null
-        - team_id: null
+        - team_id: CB3Y69STL7
         - team_name: null
         - app_id: null
         - bundle_id: com.playmgm.nj.sports2
