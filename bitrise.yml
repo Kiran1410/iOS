@@ -22,6 +22,7 @@ workflows:
             #!/bin/bash
             # fail if any commands fails
             ls -lart /Users/vagrant/git/
+            rm -rf /Users/vagrant/git/Build
             xcodebuild -workspace UnityiOSPOC/UnityiOSPOC.xcworkspace -scheme UnityiOSPOC -configuration 'Release' -archivePath ./UnityiOSPOC.xcarchive archive
             xcodebuild -exportArchive -archivePath ./UnityiOSPOC.xcarchive -exportPath ./Build -exportOptionsPlist ./ExportOptions.plist
             ls -lart /Users/vagrant/git/Build
@@ -40,7 +41,7 @@ workflows:
         - ipa_path: $IPA_PATH
         - connection: apple_id
     envs:
-    - IPA_PATH: /Users/vagrant/git/Build
+    - IPA_PATH: /Users/vagrant/git/Build/UnityiOSPOC.ipa
       opts:
         is_expand: false
 meta:
